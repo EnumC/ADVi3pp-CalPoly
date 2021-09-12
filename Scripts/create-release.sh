@@ -59,13 +59,13 @@ cp "${advi3pp}/.pioenvs/advi3pp-52c-bltouch/firmware.hex" "${release}/ADVi3pp-Ma
 cp "${advi3pp}/.pioenvs/advi3pp-54/firmware.hex" "${release}/ADVi3pp-Mainboard-54-${version}.hex"
 ret=$?; if [[ $ret != 0 ]]; then exit $ret; fi
 
-echo
-echo "***** Copy Arduino Core..."
-echo
-pushd "${advi3pp}" >/dev/null
-zip -r -x@${scripts}/excludes-core.txt "${release}/ArduinoCore-${version}.zip" ArduinoCore
-ret=$?; if [[ $ret != 0 ]]; then popd && exit $ret; fi
-popd >/dev/null
+#echo
+#echo "***** Copy Arduino Core..."
+#echo
+#pushd "${advi3pp}" >/dev/null
+#zip -r -x@${scripts}/excludes-core.txt "${release}/ArduinoCore-${version}.zip" #ArduinoCore
+#ret=$?; if [[ $ret != 0 ]]; then popd && exit $ret; fi
+#popd >/dev/null
 
 echo
 echo "**** ADVi3++ ${version} is ready in ${release}"
